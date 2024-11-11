@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color:rgba(147, 147, 147, 0.397) ;
-    border-radius: 10px;
+    background-color:rgb(48, 47, 47) ;
+    border-radius: 3px;
     gap: 5px;
 
     .showCase{
@@ -14,7 +14,7 @@
       align-items: center;
       justify-content: center;
       font-size: large;
-      font-weight: bold;
+      font-weight: medium;
 
       .showCaseText{
         margin-bottom: 20px;
@@ -26,6 +26,11 @@
         background-color: transparent;
         border: none;
         outline: none;
+        height: 30px;
+        width: 100%;
+        font-size: 18px;
+        text-align: center;
+        color: white;
       }
     }
   }

@@ -92,7 +92,7 @@ const Control = () => {
           {showWarning && <Alert message={warning} type="error" showIcon />}
         </div>
         <div className="showCaseText">
-          {state2 && <div className="text">{`${direction} * ${num}`}</div>}
+          {!state2 && <div className="text">{`${direction} * ${num}`}</div>}
         </div>
       </div>
       <div className="input">
