@@ -25,9 +25,10 @@ export const initializeDatabase = () => {
     console.log("已连接到数据库,ID: " + db.threadId);
 
     const dropDataTable = `DROP TABLE IF EXISTS data`;
-    const dropMotionTable = `DROP TABLE IF EXISTS motion`;
+    const dropOperationTable = `DROP TABLE IF EXISTS operation`;
+    const dropStatusTable = `DROP TABLE IF EXISTS status`;
 
-    // 删除 todos 表（如果存在）
+    // 删除data表（如果存在）
     db.query(dropDataTable, (err) => {
       if (err) {
         console.error("删除data表失败: " + err.message);
@@ -36,59 +37,85 @@ export const initializeDatabase = () => {
       }
       console.log("data表已删除(如果存在)");
 
-      // 删除 users 表（如果存在）
-      db.query(dropMotionTable, (err) => {
+      // 创建data表
+      // 需要修改
+      const createDataTable = `  
+          CREATE TABLE data (  
+            id INT AUTO_INCREMENT PRIMARY KEY,  
+            username VARCHAR(255) NOT NULL,  
+            password VARCHAR(255) NOT NULL  
+          )  
+      `;
+
+      db.query(createDataTable, (err) => {
         if (err) {
-          console.error("删除motion表失败: " + err.message);
+          console.error("创建data表失败: " + err.message);
           db.end(); // 关闭连接
           return;
         }
-        console.log("motion表已删除(如果存在)");
+        console.log("data表创建成功");
+      });
+    });
 
-        // 创建 users 表
-        //需要修改
-        const createUsersTable = `  
+    // 删除operation表（如果存在）
+    db.query(dropOperationTable, (err) => {
+      if (err) {
+        console.error("删除operation表失败: " + err.message);
+        db.end(); // 关闭连接
+        return;
+      }
+      console.log("operation表已删除(如果存在)");
+
+      // 创建operation表
+      // 需要修改
+      const createOperationTable = `  
+          CREATE TABLE operation (  
+            id INT AUTO_INCREMENT PRIMARY KEY,  
+            username VARCHAR(255) NOT NULL,  
+            password VARCHAR(255) NOT NULL  
+          )  
+      `;
+
+      db.query(createOperationTable, (err) => {
+        if (err) {
+          console.error("创建operation表失败: " + err.message);
+          db.end(); // 关闭连接
+          return;
+        }
+        console.log("operation表创建成功");
+      });
+    });
+
+    // 删除status表（如果存在）
+    db.query(dropStatusTable, (err) => {
+      if (err) {
+        console.error("删除status表失败: " + err.message);
+        db.end(); // 关闭连接
+        return;
+      }
+      console.log("status表已删除(如果存在)");
+
+      // 创建status表
+      //需要修改
+      const createStatusTable = `  
           CREATE TABLE users (  
             id INT AUTO_INCREMENT PRIMARY KEY,  
             username VARCHAR(255) NOT NULL,  
             password VARCHAR(255) NOT NULL  
           )  
-        `;
+      `;
 
-        db.query(createUsersTable, (err) => {
-          if (err) {
-            console.error("创建 users 表失败: " + err.message);
-            db.end(); // 关闭连接
-            return;
-          }
-          console.log("users 表创建成功");
-
-          // 创建 todos 表，设置外键约束
-          const createTodosTable = `  
-            CREATE TABLE todos (  
-              id VARCHAR(255) NOT NULL,  
-              name VARCHAR(255) NOT NULL,  
-              time VARCHAR(255) NOT NULL,  
-              uid INT NOT NULL,  
-              selected TINYINT,  
-              overdue TINYINT,  
-              PRIMARY KEY (id),  
-              FOREIGN KEY (uid) REFERENCES users(id) ON DELETE CASCADE  
-            )  
-          `;
-
-          db.query(createTodosTable, (err) => {
-            if (err) {
-              console.error("创建 todos 表失败: " + err.message);
-            } else {
-              console.log("todos 表创建成功");
-            }
-
-            // 创建表完成后，设置 isInitialized 为 true
-            isInitialized = true;
-          });
-        });
+      db.query(createStatusTable, (err) => {
+        if (err) {
+          console.error("创建status表失败: " + err.message);
+          db.end(); // 关闭连接
+          return;
+        }
+        console.log("status表创建成功");
       });
     });
+
+    // 创建表完成后，设置 isInitialized 为 true
+    isInitialized = true;
   });
 };
