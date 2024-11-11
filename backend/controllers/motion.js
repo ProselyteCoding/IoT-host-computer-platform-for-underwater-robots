@@ -1,22 +1,35 @@
-import { db } from "../db.js";
+import { db } from "../db.js"; 
+import { client } from "../mqttClient/mqttClient.js"; // 使用已有的 MQTT 客户端
 
-export const getMotion = async (req, res) => {
-  try {
-    const motion = await db.motion.find();
-    res.status(200).json(motion);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
+// 处理方向指令并发送到 MQTT
+export const recordOperation = (req, res) => {
+    const { motion } = req.body; // 从请求中获取运动指令
+
+    // 将指令写入 operation 表
+    const sqlOperation = 'INSERT INTO operation (motion, time) VALUES (?, NOW())';
+
+    db.query(sqlOperation, [motion], (err, result) => {
+        if (err) {
+            return res.status(500).json(err); 
+        } else {
+            // 发送指令到 MQTT
+            client.publish("control/movement", motion, (mqttErr) => {
+                if (mqttErr) {
+                    return res.status(500).json({ message: "Error sending to MQTT", error: mqttErr });
+                } else {
+                    return res.status(200).json("Motion command recorded and sent to MQTT.");
+                }
+            });
+        }
+    });
 };
 
-export const sendMotion = async (req, res) => {
-  try {
-    const motion = req.body;
-    const newMotion = await db.motion.create(motion);
-    res.status(201).json(newMotion);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: "Internal Server Error" });
-  }
+// 获取操作记录
+export const getOperations = (req, res) => {
+    const q = "SELECT * FROM operation";
+
+    db.query(q, (err, data) => {
+        if (err) return res.status(500).send(err);
+        return res.status(200).json(data); // 返回操作记录
+    });
 };
