@@ -18,7 +18,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use("/api/data",dataRoutes);
 app.use("/api/motion",motionRoutes);
-app.use()
 
 //监听后端服务器端口
 app.listen(process.env.PORT, () => {

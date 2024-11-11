@@ -13,13 +13,7 @@ export const getData = (req, res) => {
 //修改任意一个代办
 export const updateData = (req, res) => {
   const q = `  
-  UPDATE todos  
-  SET selected = CASE   
-                     WHEN selected = 0 THEN 1   
-                     WHEN selected = 1 THEN 0   
-                     ELSE selected   
-                 END  
-  WHERE id = ?;  
+ 
   `;
   const id = req.body.id.toString();
   db.query(q, [id], (err) => {

@@ -1,4 +1,4 @@
-import {db, initializeDatabase} from "../db.js";
+import {db} from "../db.js";
 import mqtt from "mqtt";
 
 // MQTT服务器设置  
