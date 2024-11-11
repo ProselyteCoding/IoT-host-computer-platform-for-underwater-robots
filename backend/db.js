@@ -44,7 +44,8 @@ export const initializeDatabase = () => {
             id INT AUTO_INCREMENT PRIMARY KEY,  
             temperature FLOAT NOT NULL,  
             pressure FLOAT NOT NULL,  
-            depth FLOAT NOT NULL 
+            depth FLOAT NOT NULL,
+            time TIMESTAMP NOT NULL
           )  
       `;
 
@@ -73,7 +74,7 @@ export const initializeDatabase = () => {
           CREATE TABLE operation (  
             id INT AUTO_INCREMENT PRIMARY KEY,  
             motion VARCHAR(25) NOT NULL,
-            time DATE NOT NULL
+            time TIMESTAMP NOT NULL
           )  
       `;
 
@@ -102,7 +103,7 @@ export const initializeDatabase = () => {
           CREATE TABLE status (  
             id INT AUTO_INCREMENT PRIMARY KEY,  
             motion VARCHAR(25) NOT NULL,
-            time DATE NOT NULL,
+            time TIMESTAMP NOT NULL,
             state VARCHAR(25) NOT NULL
           )  
       `;
