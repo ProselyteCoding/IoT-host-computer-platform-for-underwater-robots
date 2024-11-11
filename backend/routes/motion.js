@@ -6,5 +6,4 @@ const router = express.Router();
 router.get("/getMotion", getMotion);
 router.post("/sendMotion", sendMotion);
 
-
 export default router;

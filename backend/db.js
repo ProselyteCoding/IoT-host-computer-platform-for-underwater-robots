@@ -42,8 +42,9 @@ export const initializeDatabase = () => {
       const createDataTable = `  
           CREATE TABLE data (  
             id INT AUTO_INCREMENT PRIMARY KEY,  
-            username VARCHAR(255) NOT NULL,  
-            password VARCHAR(255) NOT NULL  
+            temperature FLOAT NOT NULL,  
+            pressure FLOAT NOT NULL,  
+            depth FLOAT NOT NULL 
           )  
       `;
 
@@ -71,8 +72,8 @@ export const initializeDatabase = () => {
       const createOperationTable = `  
           CREATE TABLE operation (  
             id INT AUTO_INCREMENT PRIMARY KEY,  
-            username VARCHAR(255) NOT NULL,  
-            password VARCHAR(255) NOT NULL  
+            motion VARCHAR(25) NOT NULL,
+            time DATE NOT NULL
           )  
       `;
 
@@ -98,10 +99,11 @@ export const initializeDatabase = () => {
       // 创建status表
       //需要修改
       const createStatusTable = `  
-          CREATE TABLE users (  
+          CREATE TABLE status (  
             id INT AUTO_INCREMENT PRIMARY KEY,  
-            username VARCHAR(255) NOT NULL,  
-            password VARCHAR(255) NOT NULL  
+            motion VARCHAR(25) NOT NULL,
+            time DATE NOT NULL,
+            state VARCHAR(25) NOT NULL
           )  
       `;
 
