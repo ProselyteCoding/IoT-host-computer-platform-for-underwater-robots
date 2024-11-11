@@ -1,0 +1,8 @@
+.show {
+  display: flex;
+  flex: 2;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(99, 99, 99, 0.397) ;
+  border-radius: 10px;
+}
