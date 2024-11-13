@@ -37,7 +37,7 @@ const Control = () => {
   useEffect(() => {
     const sendDirection = async () => {
       try {
-        await axios.post('http://localhost:3001/api/direction', { direction: value });
+        await axios.post('http://localhost:8800/api/motion', { direction: value });
       } catch (error) {
         console.log(error);
         setWarning('Failed to send direction');
@@ -59,8 +59,8 @@ const Control = () => {
     };
 
     // Uncomment these if you want to actually call them
-    // getSignal();
     // sendDirection();
+    // getSignal();
 
     // 更新方向
     switch (value) {
