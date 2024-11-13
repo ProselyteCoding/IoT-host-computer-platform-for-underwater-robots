@@ -1,5 +1,5 @@
 import { db } from "../db.js"; 
-import { client } from "../mqttClient/mqttClient.js"; // 使用已有的 MQTT 客户端
+import { client } from "../mqtt.js"; // 使用已有的 MQTT 客户端
 
 // 处理方向指令并发送到 MQTT
 export const recordOperation = (req, res) => {
