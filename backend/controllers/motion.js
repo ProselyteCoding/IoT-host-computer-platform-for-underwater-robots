@@ -2,7 +2,7 @@ import { db } from "../db.js";
 import { client } from "../mqtt.js"; // 使用已有的 MQTT 客户端
 
 // 处理方向指令并发送到 MQTT
-export const recordOperation = (req, res) => {
+export const sendOperation = (req, res) => {
     const { motion } = req.body; // 从请求中获取运动指令
 
     // 将指令写入 operation 表
@@ -33,3 +33,5 @@ export const getOperations = (req, res) => {
         return res.status(200).json(data); // 返回操作记录
     });
 };
+
+// 写入
