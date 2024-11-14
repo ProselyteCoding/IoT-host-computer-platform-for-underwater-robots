@@ -1,8 +1,8 @@
 
 
-# ProjectName
+# 水下机器人上位机平台
 
-ProjectName and Description
+ourEDA实验室web方向大二上作业——基于react、express的web网页应用程序，使用MQTT协议与下位机建立通信
 
 <!-- PROJECT SHIELDS -->
 
@@ -17,22 +17,22 @@ ProjectName and Description
 <br />
 
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
+  <a href="https://github.com/ProselyteCoding/IoT-host-computer-platform-for-underwater-robots/">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">"完美的"README模板</h3>
+  <h3 align="center">水下机器人上位机平台</h3>
   <p align="center">
-    一个"完美的"README模板去快速开始你的项目！
+    ourEDA实验室web方向大二上作业——基于react、express的web网页应用程序，使用MQTT协议与下位机建立通信
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template"><strong>探索本项目的文档 »</strong></a>
+    <a href="https://github.com/ProselyteCoding/IoT-host-computer-platform-for-underwater-robots"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
+    <a href="https://github.com/ProselyteCoding/IoT-host-computer-platform-for-underwater-robots">查看Demo</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">报告Bug</a>
+    <a href="https://github.com/ProselyteCoding/IoT-host-computer-platform-for-underwater-robots/issues">报告Bug</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a>
+    <a href="https://github.com/ProselyteCoding/IoT-host-computer-platform-for-underwater-robots/issues">提出新特性</a>
   </p>
 
 </p>
@@ -147,7 +147,7 @@ xxx@xxxx
 
 ### 版权说明
 
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/ProselyteCoding/IoT-host-computer-platform-for-underwater-robots/blob/master/LICENSE.txt)
 
 ### 鸣谢
 
