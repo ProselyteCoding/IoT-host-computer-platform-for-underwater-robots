@@ -48,9 +48,10 @@ client.on('message', (topic, message) => {
             });
         } else if (topic === topicControl) {
             const motionCommand = msg.motion;
+            //模拟状态下默认下位机执行状态为"Success"
             const sqlStatus = 'INSERT INTO status (motion, time, state) VALUES (?, NOW(), ?)';
 
-            db.query(sqlStatus, [motionCommand, 'active'], (err) => {
+            db.query(sqlStatus, [motionCommand, 'Success'], (err) => {
                 if (err) {
                     console.error('Error inserting status into database:', err);
                 } else {

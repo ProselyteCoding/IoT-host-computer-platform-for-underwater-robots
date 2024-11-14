@@ -1,5 +1,5 @@
 import express from "express";
-import { sendOperation, getOperations } from "../controllers/motion.js"; // 导入控制器逻辑
+import { sendOperation, getOperations, getHistory } from "../controllers/motion.js"; // 导入控制器逻辑
 
 const router = express.Router();
 
@@ -7,6 +7,9 @@ const router = express.Router();
 router.post("/sendMotion", sendOperation);
 
 // 读取操作日志
-router.get("/getOperations", getOperations); // 获取操作记录的接口
+router.get("/getOperations", getOperations); 
+
+// 读取状态日志
+router.get("/getHistory", getHistory);
 
 export default router;
