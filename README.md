@@ -116,8 +116,8 @@ filetree
 该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/shaojintian/Best_README_template/blob/master/LICENSE.txt)
 
 <!-- links -->
-[your-project-path]:shaojintian/Best_README_template
-[contributors-shield]: https://img.shields.io/github/contributors/shaojintian/Best_README_template.svg?style=flat-square
+[your-project-path]:ProselyteCoding/IoT-host-computer-platform-for-underwater-robots
+[contributors-shield]: https://github.com/ProselyteCoding/IoT-host-computer-platform-for-underwater-robots.svg?style=flat-square
 [contributors-url]: https://github.com/ProselyteCoding/IoT-host-computer-platform-for-underwater-robots/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/shaojintian/Best_README_template.svg?style=flat-square
 [forks-url]: https://github.com/shaojintian/Best_README_template/network/members
