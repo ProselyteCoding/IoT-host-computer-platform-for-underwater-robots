@@ -11,6 +11,7 @@ const Show = () => {
     const [history, setHistory] = useState([]);
     const [showWarning, setShowWarning] = useState(false);
     const [warning, setWarning]= useState('');
+    const [successHistory, setSuccessHistory] = useState([]);
 
     useEffect(() => {
         if (showWarning) {
@@ -33,6 +34,20 @@ const Show = () => {
                 setShowWarning(true);
             }
         };
+
+        const fetchSuccessHistory = async () => {
+            try {
+                const response = await axios.get('http://localhost:8800/api/motion/getHistory');
+                setSuccessHistory(response.data.slice(-20));
+                //console.log(response.data);
+            } catch (error) {
+                console.log(error);
+                setWarning('Failed to fetch success history');
+                setShowWarning(true);
+            }
+        };
+
+        fetchSuccessHistory();
 
         fetchHistory();
         
@@ -74,7 +89,9 @@ const Show = () => {
                 {showWarning && <Alert message={`${warning}`} type="error" showIcon />}
             </div>
             <div className="text">
-                {data.map((item, index) => (
+                <div className='title'>Data</div>
+                <div className='line'>
+                    {data.map((item, index) => (
                     <div key={index} className='item'>
                         <div className="temp">Temperature: {item.temperature}</div>
                         <div className="pressure">Pressure: {item.pressure}</div>
@@ -82,16 +99,35 @@ const Show = () => {
                         <div className='date'>Time: {item.time}</div>
                     </div>
                 ))}
+                </div>
+
             </div>
 
             <div className="history">
                 <div className='historyText'>
-                    {history.map((item, index) => (
+                    <div className='title'>History</div>
+                    <div className='line'>
+                       {history.map((item, index) => (
                         <div key={index} className='item'>
                             <div className="motion">Motion: {item.motion}</div>
                             <div className="time">Time: {item.time}</div>
                         </div >
-                    ))}
+                        ))} 
+                    </div>
+                    
+                </div>
+                <div className='successText'>
+                    <div className='title'>Success History</div>
+                    <div className='line'>
+                        {successHistory.map((item, index) => (
+                            <div key={index} className='item'>
+                                <div className="motion">Motion: {item.motion}</div>
+                                <div className="time">Time: {item.time}</div>
+                                <div className="state">Success: {item.state}</div>
+                            </div >
+                        ))}      
+                    </div>
+                    
                 </div>
                 
             </div>

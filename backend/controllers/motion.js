@@ -13,7 +13,7 @@ export const sendOperation = (req, res) => {
             return res.status(500).json(err); 
         } else {
             // 发送指令到 MQTT
-            client.publish("control/movement", motion, (mqttErr) => {
+            client.publish("control/movement", `{"motion": "${motion}"}`, (mqttErr) => {
                 if (mqttErr) {
                     return res.status(500).json({ message: "Error sending to MQTT", error: mqttErr });
                 } else {
@@ -34,4 +34,12 @@ export const getOperations = (req, res) => {
     });
 };
 
-// 写入
+// 获取状态日志
+export const getHistory = (req, res) => {
+    const q = "SELECT * FROM status";
+
+    db.query(q, (err, data) => {
+        if (err) return res.status(500).send(err);
+        return res.status(200).json(data); // 返回状态日志
+    });
+};
