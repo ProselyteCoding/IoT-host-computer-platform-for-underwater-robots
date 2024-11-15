@@ -84,22 +84,48 @@ git clone https://github.com/ProselyteCoding/IoT-host-computer-platform-for-unde
 ### 文件目录说明
 
 ```
-filetree 
-├── ARCHITECTURE.md
+IoT-host-computer-platform-for-underwater-robots/
+├── backend/
+│   ├── controllers/
+│   │   ├── data.js
+│   │   └── motion.js
+│   ├── routes/
+│   │   ├── data.js
+│   │   └── motion.js
+│   ├── mqtt/
+│   │   └── mqtt.py
+│   ├── .env
+│   ├── .gitignore
+│   ├── db.js
+│   ├── index.js
+│   ├── mqtt.js
+│   ├── package-lock.json
+│   └── package.json
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── control/
+│   │   │   │   ├── control.css
+│   │   │   │   └── control.jsx
+│   │   │   └── show/
+│   │   │       ├── show.css
+│   │   │       └── show.jsx
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── index.jsx
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── favicon.ico
+│   │   └── bg.jpg
+│   ├── .gitignore
+│   ├── package-lock.json
+│   └── package.json
+├── mqtt/
+│   ├── mqtt.py
 ├── LICENSE.txt
-├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
+├── logo.png
+└── README.md
 
 ```
 
