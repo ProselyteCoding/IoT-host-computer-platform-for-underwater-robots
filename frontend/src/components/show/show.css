@@ -52,7 +52,7 @@
         .item{
           /* border: 3px solid rgb(210, 202, 202); */
           margin: 5px;
-          background-color: rgba(173, 173, 173, 0.279);
+          margin-left: 10px;
 
         }
       }
@@ -102,10 +102,15 @@
         background-color: rgb(102, 102, 102);
       }
     }
+
+    .item{
+      margin: 5px;
+      margin-left: 10px;
+    }
   }
   .text {
     font-size: 20px;
-    color: rgb(210, 202, 202);
+    color: rgb(222, 222, 222);
     text-align: center;
     display: flex;
     flex: 2;
@@ -140,6 +145,6 @@
       /* border: 3px solid rgb(210, 202, 202); */
       border-radius: 15px;
       margin: 5px;
-      background-color: rgba(180, 180, 180, 0.192);
+      background-color: rgba(180, 180, 180, 0.356);
     }}
 }
