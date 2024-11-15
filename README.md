@@ -43,24 +43,18 @@ ourEDA实验室web方向大二上作业——基于react、express的web网页�
 ## 目录
 
 - [上手指南](#上手指南)
-  - [开发前的配置要求](#开发前的配置要求)
+  - [项目效果](#项目效果)
   - [安装步骤](#安装步骤)
 - [文件目录说明](#文件目录说明)
 - [开发的架构](#开发的架构)
-- [贡献者](#贡献者)
 - [版本控制](#版本控制)
 - [作者](#作者)
 
 ### 上手指南
 
-请将所有链接中的“shaojintian/Best_README_template”改为“your_github_name/your_repository”
+###### 项目效果
 
-
-
-###### 开发前的配置要求
-
-1. xxxxx x.x.x
-2. xxxxx x.x.x
+    
 
 ###### **安装步骤**
 
@@ -72,7 +66,7 @@ git clone https://github.com/ProselyteCoding/IoT-host-computer-platform-for-unde
 ```
 3. Install necessary files
 
-  Open the terminal and input the following instructions in lines
+  Open the terminal and input the following instructions in lines.
 
   ```
   cd backend
@@ -109,10 +103,6 @@ filetree
 
 ```
 
-
-
-
-
 ### 开发的架构 
 
 请阅读[ARCHITECTURE.md](https://github.com/shaojintian/Best_README_template/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
@@ -121,22 +111,13 @@ filetree
 
 暂无
 
-
-### 贡献者
-
-请阅读**CONTRIBUTING.md** 查阅为该项目做出贡献的开发者。
-
-
-
 ### 版本控制
 
 该项目使用Git进行版本管理。
 
 ### 作者
 
-xxx@xxxx
-
-知乎:xxxx  &ensp; qq:xxxxxx    
+陈胤 王一帆
 
  *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
