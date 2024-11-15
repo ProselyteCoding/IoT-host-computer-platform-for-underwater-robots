@@ -4,9 +4,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color:rgb(48, 47, 47) ;
+    background-color:rgba(46, 46, 46, 0.413) ;
     border-radius: 3px;
     gap: 5px;
+    border-top: 1px solid rgb(54, 54, 54);
 
     .showCase{
       display: flex;
