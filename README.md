@@ -44,8 +44,11 @@ ourEDA实验室web方向大二上作业——基于react、express的web网页�
   - [项目效果](#项目效果)
   - [安装步骤](#安装步骤)
 - [文件目录说明](#文件目录说明)
+- [不足](#不足)
+- [部署](#部署)
 - [版本控制](#版本控制)
 - [作者](#作者)
+- [版权说明](#版权说明)
 
 ### 上手指南
 
@@ -126,9 +129,9 @@ IoT-host-computer-platform-for-underwater-robots/
 
 ```
 
-### 开发的架构 
+### 不足 
 
-请阅读[ARCHITECTURE.md](https://github.com/shaojintian/Best_README_template/blob/master/ARCHITECTURE.md) 查阅为该项目的架构。
+使用git进行版本控制时未注意提交的命名格式，不够规范。
 
 ### 部署
 
@@ -141,8 +144,6 @@ IoT-host-computer-platform-for-underwater-robots/
 ### 作者
 
 陈胤 王一帆
-
- *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
 ### 版权说明
 
