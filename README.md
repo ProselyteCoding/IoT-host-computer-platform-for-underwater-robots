@@ -37,8 +37,6 @@ ourEDA实验室web方向大二上作业——基于react、express的web网页�
 
 </p>
 
-
- 本篇README.md面向开发者
  
 ## 目录
 
