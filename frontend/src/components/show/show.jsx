@@ -4,8 +4,10 @@ import {Alert} from 'antd';
 import './show.css';
 
 const Show = () => {
-    const [data, setData] = useState([]);
-
+    const [data, setData] = useState(["Temperature:16.7",
+        "Pressure:102.13",
+        "Depth:2.35",
+        "Time:2024-11-14T09:03:13.000Z"]);
     const [sign, setSign] = useState(1);
     const [sign2, setSign2] = useState(1);
     const [history, setHistory] = useState([]);
@@ -86,7 +88,7 @@ const Show = () => {
     return (
         <div className="show">
             <div className='Alert'>
-                {showWarning && <Alert message={`${warning}`} type="error" showIcon />}
+                {/* {showWarning && <Alert message={`${warning}`} type="error" showIcon />} */}
             </div>
             <div className="text">
                 <div className='title'>Data</div>

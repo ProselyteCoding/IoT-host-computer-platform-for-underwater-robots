@@ -6,9 +6,11 @@ import React, {useState, useEffect} from'react';
 
 function App() {
   return (
-    <div className='container' style={{ backgroundImage: `url('bg.jpg')` }}>
-      <Show />
-      <Control />
+    <div className='main' style={{ backgroundImage: `url('bg.jpg')`  , backgroundSize: 'cover'}}>
+      <div className='container'>
+          <Show />
+          <Control />   
+      </div>
     </div>
   );
 }

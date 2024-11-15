@@ -89,7 +89,7 @@ const Control = () => {
     <div className="control">
       <div className="showCase">
         <div className="warning">
-          {showWarning && <Alert message={warning} type="error" showIcon />}
+          {/* {showWarning && <Alert message={warning} type="error" showIcon />} */}
         </div>
         <div className="showCaseText">
           {!state2 && <div className="text">{`${direction} * ${num}`}</div>}

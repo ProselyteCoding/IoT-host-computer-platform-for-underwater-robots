@@ -3,7 +3,7 @@
   flex: 3;
   align-items: center;
   justify-content: center;
-  background-color:rgb(66, 65, 65) ;
+  background-color:rgba(82, 82, 82, 0.388) ;
   border-radius: 3px;
   height: 100%;
   overflow: hidden;
@@ -34,6 +34,7 @@
     justify-content: center;
     border-radius: 3px;
     height: 100%;
+    background-color: rgba(57, 57, 57, 0.247);
 
     .historyText {
       height: 50%;
@@ -51,7 +52,7 @@
         .item{
           /* border: 3px solid rgb(210, 202, 202); */
           margin: 5px;
-          background-color: rgba(142, 142, 142, 0.5);
+          background-color: rgba(173, 173, 173, 0.279);
 
         }
       }
@@ -60,7 +61,7 @@
         font-size: 20px;
         color: rgb(174, 174, 174);
         position: absolute;
-        background-color: rgb(96, 96, 96);
+        background-color: rgba(44, 44, 44, 0.388);
         display: flex;
         width: 33.4%;
         border-radius: 2px;
@@ -87,7 +88,7 @@
         font-size: 20px;
         color: rgb(174, 174, 174);
         position: absolute;
-        background-color: rgb(96, 96, 96);
+        background-color: rgba(44, 44, 44, 0.388);
         display: flex;
         width: 33.4%;
         border-radius: 2px;
@@ -113,6 +114,8 @@
     justify-content: center;
     margin-right: 10px;
     height: 100%;
+    border-right: 1px solid rgb(79, 79, 79);
+
 
     .line {
       display: flex;
@@ -126,7 +129,7 @@
       color: rgb(174, 174, 174);
       position: absolute;
       top: 0;
-      background-color: rgb(96, 96, 96);
+      background-color: rgba(44, 44, 44, 0.388);
       display: flex;
       width: 66.3%;
       border-radius: 2px;
@@ -137,6 +140,6 @@
       /* border: 3px solid rgb(210, 202, 202); */
       border-radius: 15px;
       margin: 5px;
-      background-color: rgba(28, 27, 40, 0.24);
+      background-color: rgba(180, 180, 180, 0.192);
     }}
 }
