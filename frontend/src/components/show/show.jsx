@@ -4,10 +4,7 @@ import {Alert} from 'antd';
 import './show.css';
 
 const Show = () => {
-    const [data, setData] = useState(["Temperature:16.7",
-        "Pressure:102.13",
-        "Depth:2.35",
-        "Time:2024-11-14T09:03:13.000Z"]);
+    const [data, setData] = useState([]);
     const [sign, setSign] = useState(1);
     const [sign2, setSign2] = useState(1);
     const [history, setHistory] = useState([]);
@@ -87,8 +84,8 @@ const Show = () => {
 
     return (
         <div className="show">
-            <div className='Alert'>
-                {/* {showWarning && <Alert message={`${warning}`} type="error" showIcon />} */}
+            <div className='Alert'style={{position: 'fixed', top: '40px'}}>
+                {showWarning && <Alert message={`${warning}`} type="error" showIcon />}
             </div>
             <div className="text">
                 <div className='title'>Data</div>
@@ -107,7 +104,7 @@ const Show = () => {
 
             <div className="history">
                 <div className='historyText'>
-                    <div className='title'>History</div>
+                    <div className='title'>Operation History</div>
                     <div className='line'>
                        {history.map((item, index) => (
                         <div key={index} className='item'>
@@ -119,7 +116,7 @@ const Show = () => {
                     
                 </div>
                 <div className='successText'>
-                    <div className='title'>Success History</div>
+                    <div className='title'>Execution History</div>
                     <div className='line'>
                         {successHistory.map((item, index) => (
                             <div key={index} className='item'>

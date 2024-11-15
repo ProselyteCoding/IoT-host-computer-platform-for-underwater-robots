@@ -1,8 +1,6 @@
 import './App.css';
 import Show from './components/show/show';
 import Control from './components/control/control';
-import React, {useState, useEffect} from'react';
-
 
 function App() {
   return (
