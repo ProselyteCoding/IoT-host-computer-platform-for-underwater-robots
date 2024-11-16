@@ -2,7 +2,7 @@
 
 # 水下机器人上位机平台
 
-ourEDA实验室web方向大二上作业——基于react、express的web网页应用程序，使用MQTT协议与下位机建立通信
+ourEDA实验室web方向大二上作业——基于react、express的web网页应用程序，使用MQTT协议与下位机建立通信。下位机用python模拟，发送与接收信号。
 
 <!-- PROJECT SHIELDS -->
 
