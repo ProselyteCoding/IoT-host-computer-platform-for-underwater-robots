@@ -2,7 +2,7 @@
 
 # 水下机器人上位机平台
 
-ourEDA实验室web方向大二上作业——基于react、express的web网页应用程序，使用MQTT协议与下位机建立通信。下位机用python模拟，发送与接收信号。
+OurEDA实验室web方向大二上作业——基于react、express的web网页应用程序，使用MQTT协议与下位机建立通信。下位机用python模拟，实现接收与发送信号。
 
 <!-- PROJECT SHIELDS -->
 
@@ -23,7 +23,7 @@ ourEDA实验室web方向大二上作业——基于react、express的web网页�
 
   <h3 align="center">水下机器人上位机平台</h3>
   <p align="center">
-    ourEDA实验室web方向大二上作业——基于react、express的web网页应用程序，使用MQTT协议与下位机建立通信
+    OurEDA实验室web方向大二上作业——基于react、express的web网页应用程序，使用MQTT协议与下位机建立通信。下位机用python模拟，实现接收与发送信号。
     <br />
     <a href="https://github.com/ProselyteCoding/IoT-host-computer-platform-for-underwater-robots"><strong>探索本项目的文档 »</strong></a>
     <br />
