@@ -54,7 +54,9 @@ OurEDA实验室web方向大二上作业——基于react、express的web网页�
 
 ###### 项目效果
 
-    
+  <p>
+      <img src="demo.png" alt="Demo" >
+  </p>
 
 ###### **安装步骤**
 
