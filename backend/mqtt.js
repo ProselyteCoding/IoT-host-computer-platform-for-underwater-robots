@@ -35,6 +35,7 @@ client.on('message', (topic, message) => {
     try {
         const msg = JSON.parse(message.toString());
 
+        //接收到传感器数据时，将数据插入数据库
         if (topic === topicSensor) {
             const { temperature, pressure, depth } = msg;
             const sql = 'INSERT INTO data (temperature, pressure, depth, time) VALUES (?, ?, ?, NOW())';
@@ -46,7 +47,9 @@ client.on('message', (topic, message) => {
                     console.log('Sensor data inserted into database.');
                 }
             });
-        } else if (topic === topicControl) {
+        } 
+        //接收到控制信号时，将信号插入数据库
+        else if (topic === topicControl) {
             const motionCommand = msg.motion;
             //模拟状态下默认下位机执行状态为"Success"
             const sqlStatus = 'INSERT INTO status (motion, time, state) VALUES (?, NOW(), ?)';

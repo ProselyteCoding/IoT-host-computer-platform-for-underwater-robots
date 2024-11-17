@@ -45,6 +45,7 @@ const Control = () => {
       }
     };
 
+    //非必要的请求
     const getSignal = async () => {
       try {
         const response = await axios.get('http://localhost:3001/api/signal');
@@ -58,7 +59,6 @@ const Control = () => {
       }
     };
 
-    // Uncomment these if you want to actually call them
      sendDirection();
     // getSignal();
 
