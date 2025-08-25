@@ -71,8 +71,6 @@ const Show = () => {
             }
         };
 
-        
-
         fetchData();
 
         const timer = setTimeout(() => {
