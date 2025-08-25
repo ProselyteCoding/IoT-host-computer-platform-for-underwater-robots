@@ -1,0 +1,116 @@
+.register-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../assets/loginBackground2.jpg);
+    .register-box {
+      height: 600px;
+      width: 35vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+      border: 1px solid white;
+      border-radius: 10px;
+      .register-title {
+        display: flex;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+        color: rgb(51, 51, 51);
+        margin-bottom: 2%;
+        cursor:default;
+      }
+  
+      .register-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        //border: 1px solid white;//供测试定位使用
+        .form-item {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: center;
+          label {
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            width: 200px;
+            height: 20px;
+            font-size: 13px;
+            color: rgb(78, 78, 78);
+            margin-bottom: 2%;
+          }
+          input {
+            border: none;
+            box-shadow: 1px 1px 2px 1px #898989;
+            outline: none;
+            border-radius: 15px;
+            width: 250px;
+            height: 20px;
+            background: transparent;
+            padding: 5px;
+            color: rgb(135, 135, 135);
+            margin-bottom: 3%;
+          }
+          select {
+            border: 1px solid white;
+            outline: none;
+            border-radius: 5px;
+            width: 190px;
+            height: 25px;
+            background: transparent;
+            padding: 3px;
+            color: white;
+            option {
+              background: #aca8a8;
+            }
+          }
+        }
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 250px;
+          height: 30px;
+          background-color: #8684a8;
+          color: white;
+          border-radius: 20px;
+          margin-bottom: 2%;
+          cursor: pointer;
+          border: none;
+          transition: all 0.3s ease-in-out;
+          &:hover{
+            background-color: #6c6a8e;
+            transform: translateY(-3px);
+          }
+        }
+        .error-message {
+          color: red;
+        }
+        .link{
+          margin-top: 10px;
+          width: 160px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          color: #8684a8;
+          Link {
+            font-size: 14px;
+            color: #8684a8;
+          }
+        }
+      }
+    }
+  }
+  
